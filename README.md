@@ -34,3 +34,75 @@ The analysis was performed using Python for data cleaning and exploratory analys
   - Top 10 Medical Conditions.png
 - **sql/**: Contains the sql file
   - healthcare_queries.sql
+
+## Data Cleaning (Notebook 1)
+
+### Import Required Libraries
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+### Load file (File location omitted for security resaons)
+```python
+df = pd.read_csv("C:/___/____/____/Hospital DA/Datasets/raw_healthcare_dataset.csv")
+```
+
+### Describing the basic stats of the data
+```python
+df.describe()
+```
+
+### Total number of rows and columns
+```python
+df.shape
+```
+
+### Check for missing values 
+```python
+df.isna().sum()
+```
+
+### To know the data types in the dataset
+```python
+df.dtypes
+```
+
+### Change the data types of dates into datetime
+```python
+df["Discharge Date"] = pd.to_datetime(df["Discharge Date"])
+df["Date of Admission"] = pd.to_datetime(df["Date of Admission"])
+```
+
+### Standardized column names to snake_case
+```python
+df.columns = df.columns = (
+    df.columns
+        .str.strip()
+        .str.lower()
+        .str.replace(" ", "_")
+        .str.replace("/", "_")
+        .str.replace("-", "_")
+)
+```
+
+### Save the cleaned data 
+```python
+df.to_csv('../Datasets/clean_healthcare_data.csv', index=False)
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
