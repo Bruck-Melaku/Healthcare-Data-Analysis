@@ -11,3 +11,13 @@ The analysis was performed using Python for data cleaning and exploratory analys
 - **Pandas**
 - **Matplotlib**
 - **SQL**
+
+## Project Structure
+- **Datasets/**: Contains the datasets
+  - clean_healthcare_data.csv
+  - raw_healthcare_dataset.csv
+- **Notebooks/**: Contains the jupyter notebooks
+  - notebook_1_data_cleaning.ipynb
+  - notebook_2_eda.ipynb
+  - notebook_3_insights.ipynb
+   
